@@ -12,6 +12,7 @@ const UsersRoute = require("./routes/UsersRoute")
 const orderRoutes = require("./routes/orderRoute")
 const categoryRoute = require("./routes/categoryRoute")
 const path = require("path")
+const send = require("send")
 // const myfunc= require("./config/config")
 // dotenv confgi
 dotenv.config()
@@ -42,6 +43,7 @@ app.get("/api/config/paypal",(req, res)=>{
 
 //static files
 app.use(express.static(path.join(__dirname, '../frontend/build')))
+app.get((req, res)=>res.send('i am called'))
 app.get('*', function(req, res){
     res.sendFile(path.join(__dirname,"../frontend/build/index.html"))
 })
