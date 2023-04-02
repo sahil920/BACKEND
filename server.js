@@ -28,7 +28,6 @@ app.use(
 ) 
 
 
-
 app.get('/', (req, res)=>{
     res.send("welcome to node server")
 })
