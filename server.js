@@ -40,6 +40,7 @@ app.use("/api/category", categoryRoute)
 app.get("/api/config/paypal",(req, res)=>{
     res.send(process.env.PAYPAL_CLIENT_ID)
 })
+ 
 
 //static files
 app.use(express.static(path.join(__dirname, '../frontend/build')))
